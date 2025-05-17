@@ -1,2 +1,19 @@
-<h1>{{ site.Title }}</h1>
-{{ partial "menu.html" (dict "menuID" "main" "page" .) }}
+<header>
+{{- $page := .page | default . -}}
+{{- $site := $page.Site -}}
+{{- $menuID := .menuID -}}
+
+<p>
+  <a href="{{ $site.BaseURL | relURL }}">{{ $site.Title }}</a>
+</p>
+
+{{- with index site.Menus $menuID }}
+  <nav>
+    {{- /* ★ $menuID を dict に含めて渡す */ -}}
+    {{- partial "menu/simplewalk.html"
+        (dict "page" $page "menuEntries" . "menuID" $menuID) -}}
+  </nav>
+{{- end }}
+
+</header>
+{{ partialCached "breadcrumbs.html" $page $page.RelPermalink }}

@@ -1,0 +1,20 @@
+{{/* tags/[タグ].html,  categories/[カテゴリ].html で利用する */}}
+{{/* _default/taxonomy.html を追加するとバグを踏んだため決して追加しないこと */}}
+{{ define "main" }}
+<h1>{{ .Title }}</h1>
+<article>
+
+{{ .Content }}
+<ul class="post-list">
+  {{ range .Pages.ByDate.Reverse }}
+    <li>
+      <a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a>
+      <time datetime="{{ .Date }}">{{ .Date.Format "2006-01-02" }}</time>
+    </li>
+  {{ end }}
+</ul>
+
+</article>
+{{ end }}
+
+

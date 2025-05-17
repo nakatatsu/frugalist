@@ -1,0 +1,12 @@
+{{- /* 外部URLかどうか判定 */ -}}
+{{- $isRemote := strings.HasPrefix .Destination "http" -}}
+{{- /* 先頭スラッシュのルート相対もそのままにする */ -}}
+{{- $isRoot   := strings.HasPrefix .Destination "/"  -}}
+
+{{- /* ページのディレクトリ (ugly/pretty どちらでも OK) */ -}}
+{{- $baseDir := path.Dir .Page.RelPermalink -}}
+
+{{- /* 上記 2 つ以外はページのディレクトリと画像名を結合 */ -}}
+{{- $src := cond (or $isRemote $isRoot) .Destination (urls.JoinPath $baseDir .Destination) -}}
+
+<img src='{{ $src | safeURL }}' alt='{{ .Text }}' loading='lazy'>

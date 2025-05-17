@@ -1,5 +1,14 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width">
+<meta name="description" content="{{ .Description | default site.Params.description }}">
+<meta name="robots" content="index,follow">
+<meta http-equiv="Content-Language" content="ja">
+<meta name="keywords" content="AWS, Terraform, IaC, ChatGPT, AI, Automation, T.Nakamura">
+<meta name="author" content="T.Nakamura">
+<meta property="og:title" content="{{ if .IsHome }}{{ site.Title }}{{ else }}{{ printf "%s | %s" .Title site.Title }}{{ end }}">
+<meta property="og:description" content="{{ .Description | default site.Params.description }}">
+<meta property="og:type" content="website">
+<meta property="og:url" content="{{ .Permalink }}">
+<meta property="og:image" content="{{ .Site.BaseURL }}/og.webp">
 <title>{{ if .IsHome }}{{ site.Title }}{{ else }}{{ printf "%s | %s" .Title site.Title }}{{ end }}</title>
 {{ partialCached "head/css.html" . }}
-{{ partialCached "head/js.html" . }}

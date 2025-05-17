@@ -1,9 +1,15 @@
-{{- with resources.Get "css/main.css" }}
-  {{- if hugo.IsDevelopment }}
-    <link rel="stylesheet" href="{{ .RelPermalink }}">
-  {{- else }}
-    {{- with . | minify | fingerprint }}
-      <link rel="stylesheet" href="{{ .RelPermalink }}" integrity="{{ .Data.Integrity }}" crossorigin="anonymous">
-    {{- end }}
+{{- $main := resources.Get "css/main.css" }}
+{{- $custom := resources.Get "css/custom.css" }}
+{{- $styles := slice $main $custom }}
+
+{{- if hugo.IsDevelopment }}
+  {{- range $styles }}
+  <link rel="stylesheet" href="{{ .RelPermalink }}">
   {{- end }}
+{{- else }}
+  {{- $bundle := $styles | resources.Concat "css/bundle.css" | minify | fingerprint }}
+  <link rel="stylesheet"
+        href="{{ $bundle.RelPermalink }}"
+        integrity="{{ $bundle.Data.Integrity }}"
+        crossorigin="anonymous">
 {{- end }}

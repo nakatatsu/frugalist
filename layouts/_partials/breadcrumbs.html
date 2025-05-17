@@ -1,0 +1,6 @@
+<nav>
+{{- range $i, $p := .Ancestors.Reverse }}
+  {{- if gt $i 0 }} &gt; {{ end -}}
+  <a href="{{ $p.RelPermalink }}">{{ $p.LinkTitle | default $p.Title }}</a>
+{{- end }}
+</nav>

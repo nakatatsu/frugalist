@@ -1,0 +1,13 @@
+{{- /* ─── 外部ファイルを読み込んでそのまま挿入する ─── */ -}}
+{{ $file := .Get 0 }}
+{{ $lang := .Get 1 | default "plaintext" }}
+{{ $path := path.Join .Page.File.Dir $file }}
+{{ $content := readFile $path }}
+{{ highlight $content $lang "" }}
+
+
+{{- /*
+    <!-- 例
+    {{< include "example.md" >}}
+    -->
+    */ -}}

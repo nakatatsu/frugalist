@@ -1,8 +1,12 @@
+{{/* セクション配下の記事一覧に利用 */}}
 {{ define "main" }}
-  <h1>{{ .Title }}</h1>
-  {{ .Content }}
-  {{ range .Pages }}
-    <h2><a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a></h2>
+<h1>{{ .Title }}section.html</h1>
+  {{ $p := .Paginate (.Pages.ByDate.Reverse)}}
+  {{ range $p.Pages }}
+  <article>
+    <h2><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
     {{ .Summary }}
+  </article>
   {{ end }}
+  {{ template "_internal/pagination.html" . }}
 {{ end }}

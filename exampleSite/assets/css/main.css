@@ -4,29 +4,37 @@
   padding: 0;
 }
 
+/* カラーパレット */
 :root {
+  /* 基調(ごく薄い色) */
   --background-base: #f3f4f6;
   --color-base: #111827;
 
+  /* 記事（ほぼ白） */
   --background-article: #ffffff;
   --color-article: #111827;
 
+  /* 上下の枠(header, footer)（とても濃い色） */
   --background-frame: #0f172a;
   --color-frame: #ffffff;
 
+  /* メニュー（やや濃い色） */
   --background-menu: #374151;
   --color-menu: #ffffff;
 
   --shadow-normal: 0 2px 6px rgba(0, 0, 0, .08);
 
+  /* ------- リンク色（デフォルト：基調／カード用） -------- */
   --link-color: #2563eb;
   --link-color-hover: #1d4ed8;
   --link-color-visited: #7c3aed;
 
+  /* ------- フレームトップ／メニュー用のリンク色 --------- */
   --link-color-frame: #93c5fd;
   --link-color-frame-hover: #bfdbfe;
   --link-color-frame-visited: #dbeafe;
 
+  /* ぴっちり詰まってしまうのを避けるための余白 */
   --main-space: 1em; 
 }
 

@@ -1,7 +1,14 @@
+{{/* /categories.html と tags.html で使われる */}}
 {{ define "main" }}
-  <h1>{{ .Title }}</h1>
-  {{ .Content }}
-  {{ range .Pages }}
-    <h2><a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a></h2>
+<h1>{{ .Title }}</h1>
+  <article>
+    <ul>
+  {{ $p := .Paginate (.Pages.ByDate.Reverse)}}
+  {{ range $p.Pages }}
+    <li><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>
+    {{ .Summary }}
   {{ end }}
+  </ul>
+  </article>
+  {{ template "_internal/pagination.html" . }}
 {{ end }}
