@@ -1,0 +1,10 @@
+{{ with .Params.categories }}
+  <div class="article-categories">
+    {{ range . }}
+      {{ $category := . | urlize }}
+      <a href="{{ "/categories/" | relLangURL }}{{ $category }}.html">
+        {{ . }}
+      </a>
+    {{ end }}
+  </div>
+{{ end }}
