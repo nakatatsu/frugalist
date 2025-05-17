@@ -5,7 +5,7 @@
 <article>
 
 {{ .Content }}
-<ul class="post-list">
+<ul class="article-list">
   {{ range .Pages.ByDate.Reverse }}
     <li>
       <a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a>
