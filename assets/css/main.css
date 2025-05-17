@@ -18,7 +18,7 @@
   --background-menu: #374151;
   --color-menu: #ffffff;
 
-  --shadow-normal: 0 2px 6px rgba(0, 0, 0, .08);
+  --shadow-normal: 0 2px 4px rgba(0, 0, 0, .1);
 
   --link-color: #2563eb;
   --link-color-hover: #1d4ed8;
@@ -81,6 +81,7 @@ section {
   border-radius: 12px;
   margin: var(--main-space) 0;
   padding: var(--main-space);
+  box-shadow: var(--shadow-normal);
 }
 
 article ul,
