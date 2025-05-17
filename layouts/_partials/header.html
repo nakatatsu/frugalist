@@ -3,9 +3,9 @@
 {{- $site := $page.Site -}}
 {{- $menuID := .menuID -}}
 
-<p>
-  <a href="{{ $site.BaseURL | relURL }}">{{ $site.Title }}</a>
-</p>
+
+  <a href="{{ $site.BaseURL | relURL }}"><img class="site-logo" src="{{ "img/logo.webp" | relURL }}" alt="{{ $site.Title }}"></a>
+
 
 {{- with index site.Menus $menuID }}
   <nav>

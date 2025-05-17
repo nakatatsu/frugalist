@@ -1,6 +1,32 @@
 {{ define "main" }}
 
-<h2>Recent Posts</h2>
+<div class="hero-image-container">
+<img src="img/top.webp"/>
+</div>
+
+<h2 class="term-title">Features</h2>
+<div class="grid grid-3">
+  <div class="card">
+    <h3>Simplicity</h3>
+    <p>
+      Designed without external CSS or JavaScript dependencies, ensuring fast loading speeds and robust performance.
+    </p>
+  </div>
+  <div class="card">
+    <h3>Taxonomy Support</h3>
+    <p>
+      Easily categorize and organize your content using built-in categories and tags.
+    </p>
+  </div>
+  <div class="card"><img src="img/icon3.webp" alt="">
+    <h3>Markdown Extensions</h3>
+    <p>
+      Supports advanced markdown features including direct text import for displaying code snippets clearly and effectively.
+    </p>
+  </div>
+</div>
+
+<h2 class="term-title">Recent Posts</h2>
 
 {{ range site.RegularPages }}
   <article>

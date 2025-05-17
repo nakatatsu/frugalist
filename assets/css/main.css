@@ -63,6 +63,7 @@ header nav a {
   display: inline-block;
   min-width: 12rem;
   text-align: left;
+  padding: 0.2em 0 ;
 }
 
 main {
@@ -73,6 +74,9 @@ main {
   min-height: 100vh;
 }
 
+main img {
+  max-width: 100%;              
+}
 
 article,
 section {
@@ -123,6 +127,10 @@ footer a:hover {
   text-decoration: underline;
 }
 
+img {
+  max-width: 100%;
+}
+
 header a:visited,
 footer a:visited {
   color: var(--link-color-frame-visited);
@@ -135,8 +143,13 @@ time {
 }
 
 
+pre {
+  padding: 1em;
+}
+
 h1,
-.article-title {
+.article-title,
+.term-title {
   font-size: 1.5rem;
   color: var(--color-article);
   font-weight: bold;
@@ -197,4 +210,15 @@ article h6 {
 .article-categories a:hover {
   background-color: var(--background-base);
   border-color: var(--color-article-light);
+}
+
+.nav-post {
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.nav-post a {
+    min-width: 30%;
+    display: inline-block;
 }
