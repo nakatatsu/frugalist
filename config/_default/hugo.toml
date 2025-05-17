@@ -1,14 +1,23 @@
 baseURL = 'https://www.sample.com/'
 languageCode = "en"
 title = 'Sample Title'
-description = 'This is an example of a description written in themes/frugalist/config/_default/hugo.toml'
 uglyURLs = true
 
 defaultContentLanguage = "en"
 timeZone               = "UTC"
 
+[languages]
+  [languages.en]
+    languageCode  = 'en'
+
 [params]
-  author = "Gonbe Nanashi"
+  description = 'This is an example of a description written in themes/frugalist/config/_default/hugo.toml'
+  keywords    = ["Hugo", "ssg"]
+
+  [params.author]
+    name  = "Gonbe Nanashi"
+    email = "gonbe@example.com"
+
 
 [taxonomies]
 tag = "tags"
