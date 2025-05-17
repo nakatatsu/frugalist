@@ -1,12 +1,13 @@
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width">
+<title>{{ if .IsHome }}{{ site.Title }}{{ else }}{{ printf "%s | %s" .Title site.Title }}{{ end }}</title>
 <meta name="description" content="{{ .Description | default site.Params.description }}">
-<meta name="robots" content="index,follow">
-<meta http-equiv="Content-Language" content="{{ .Site.Language.LanguageCode }}">
 {{- $keywords := .Keywords | default site.Params.keywords -}}
 {{- with $keywords }}
 <meta name="keywords" content="{{ delimit . ", " }}">
 {{- end }}
+<meta name="viewport" content="width=device-width">
+<meta name="robots" content="index,follow">
+<meta http-equiv="Content-Language" content="{{ .Site.Language.LanguageCode }}">
 {{- $author := (.Param "author") | default site.Params.author -}}
 {{- with $author }}
 <meta name="author" content="{{ . }}">
@@ -16,5 +17,5 @@
 <meta property="og:type" content="website">
 <meta property="og:url" content="{{ .Permalink }}">
 <meta property="og:image" content="{{ .Site.BaseURL }}img/og.webp">
-<title>{{ if .IsHome }}{{ site.Title }}{{ else }}{{ printf "%s | %s" .Title site.Title }}{{ end }}</title>
+<link rel="canonical" href="{{ .Permalink }}">
 {{ partialCached "head/css.html" . }}
