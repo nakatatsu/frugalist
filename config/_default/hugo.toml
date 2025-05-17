@@ -14,6 +14,8 @@ timeZone               = "UTC"
 [params]
   description = 'This is an example of a description written in themes/frugalist/config/_default/hugo.toml'
   keywords    = ["Hugo", "ssg"]
+  themeName = "default" 
+
 
   [params.author]
     name  = "Gonbe Nanashi"
