@@ -4,7 +4,7 @@
 
 {{ range site.RegularPages }}
   <article>
-  <h3><a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a></h3>
+  <h3 class="article-title"><a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a></h3>
     {{ .Summary }}
   </article>
 {{ end }}
