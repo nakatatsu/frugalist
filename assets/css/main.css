@@ -28,6 +28,9 @@
   --link-color-frame-hover: #bfdbfe;
   --link-color-frame-visited: #dbeafe;
 
+  --background-accent-light: var(--background-base);
+  --border-accent-light: #ddd;
+
   --main-space: 1em;
 }
 
@@ -170,4 +173,26 @@ article h5 {
 
 article h6 {
   font-size: 0.95rem;
+}
+
+.article-categories {
+  margin-bottom: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.article-categories a {
+  font-size: 0.8rem;
+  color: var(--color-article-light);
+  background-color: var(--background-accent-light);
+  padding: 0.2rem 0.6rem;
+  border-radius: 4px;
+  text-decoration: none;
+  border: 1px solid var(--border-accent-light);
+}
+
+.article-categories a:hover {
+  background-color: var(--background-base);
+  border-color: var(--color-article-light);
 }
