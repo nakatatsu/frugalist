@@ -8,8 +8,7 @@
 <ul class="article-list">
   {{ range .Pages.ByDate.Reverse }}
     <li>
-      <a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a>
-      <time datetime="{{ .Date }}">{{ .Date.Format "2006-01-02" }}</time>
+      <a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a> <time datetime="{{ .Date }}">{{ .Date.Format "2006-01-02" }}</time>
     </li>
   {{ end }}
 </ul>

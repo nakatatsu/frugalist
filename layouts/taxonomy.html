@@ -6,7 +6,6 @@
   {{ $p := .Paginate (.Pages.ByDate.Reverse)}}
   {{ range $p.Pages }}
     <li><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>
-    {{ .Summary }}
   {{ end }}
   </ul>
   </article>
