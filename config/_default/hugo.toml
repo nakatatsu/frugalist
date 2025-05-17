@@ -2,6 +2,7 @@ baseURL = 'https://www.sample.com/'
 languageCode = "en"
 title = 'Sample Title'
 uglyURLs = true
+enableRobotsTXT = true
 
 defaultContentLanguage = "en"
 timeZone               = "UTC"

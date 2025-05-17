@@ -1,0 +1,16 @@
+baseURL = 'https://www.sample.com/'
+title = 'SampleTitle'
+enableRobotsTXT = true
+uglyURLs = true
+theme = "frugalist"
+defaultContentLanguage = 'en'
+
+[languages]
+  [languages.en]
+    languageCode  = 'en'
+  [languages.ja]
+    languageCode  = 'ja-JP'
+
+[pagination]
+  pagerSize = 5 
+  path      = "page"
