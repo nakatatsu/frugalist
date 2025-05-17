@@ -1,0 +1,44 @@
+.site-logo {
+  max-height: 50px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
+
+@media(min-width:768px) {
+  .grid-3 {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.card {
+  background: var(--background-article);
+  padding: 1rem;
+  border-radius: .5rem;
+  box-shadow: var(--shadow-normal);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.card img {
+  width: 5rem;
+  height: auto;
+  margin-inline: auto .5rem 0;
+}
+
+.card h3 {
+  font-size: 1.125rem;
+  font-weight: 600;
+  margin-bottom: .25rem;
+}
+
+.card p {
+  font-size: .875rem;
+  color: #374151;
+  text-align: left;
+}
