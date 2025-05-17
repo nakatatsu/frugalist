@@ -3,7 +3,7 @@
   
   {{ $pages := .Site.RegularPages }}
   {{ $sorted := $pages.ByLastmod.Reverse }} {{/* Hugo ≥0.147 */}}
-  {{ $paginator := .Paginate $sorted 20 }}
+  {{ $paginator := .Paginate $sorted }}
   {{ range $paginator.Pages }}
     <article>
       <h2><a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a></h2>

@@ -1,0 +1,66 @@
+baseURL = 'https://www.sample.com/'
+languageCode = "en"
+title = 'Sample Title'
+description = 'This is an example of a description written in themes/frugalist/config/_default/hugo.toml'
+uglyURLs = true
+
+defaultContentLanguage = "en"
+timeZone               = "UTC"
+
+[params]
+  author = "Gonbe Nanashi"
+
+[taxonomies]
+tag = "tags"
+category = "categories"
+
+[frontmatter]
+default = "yaml"
+lastmod = [":git", "lastmod", ":fileModTime", "date"]
+
+
+[menus]
+  [[menus.main]]
+    name     = "Home"
+    pageRef  = "/"
+    weight   = 10 
+
+  [[menus.main]]
+    name     = "Recent Posts"
+    url   = "/updated.html"
+    weight   = 20
+
+  [[menus.main]]
+    name     = "Categories"
+    pageRef  = "/categories.html"
+    weight   = 30
+
+  [[menus.main]]
+    name     = "Tags"
+    pageRef  = "/tags.html"
+    weight   = 40
+
+
+[markup]
+
+  [markup.goldmark.renderer]
+    unsafe = true
+
+  [markup.goldmark]
+    [markup.goldmark.extensions.passthrough]
+      enable = true
+      [markup.goldmark.extensions.passthrough.delimiters]
+        block = [['::', '::']]
+
+    [markup.goldmark.parser.attribute]
+      block = true
+
+[pagination]
+  pagerSize = 10 
+  path      = "page"
+
+[minify]
+  [minify.tdewolff]
+    [minify.tdewolff.html]
+      keepWhitespace = false
+      keepDocumentTags = true
