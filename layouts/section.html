@@ -1,6 +1,5 @@
-{{/* セクション配下の記事一覧に利用 */}}
 {{ define "main" }}
-<h1>{{ .Title }}section.html</h1>
+<h1>{{ .Title }}</h1>
   {{ $p := .Paginate (.Pages.ByDate.Reverse)}}
   {{ range $p.Pages }}
   <article>

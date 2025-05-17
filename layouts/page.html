@@ -13,11 +13,11 @@
 
 <nav class="nav-post">
   {{ with $pages.Prev . }}
-    <a class="prev" href="{{ .RelPermalink }}">« 前へ：{{ .LinkTitle }}</a>
+    <a class="prev" href="{{ .RelPermalink }}">« Prev: {{ .LinkTitle }}</a>
   {{ end }}
 
   {{ with $pages.Next . }}
-    <a class="next" href="{{ .RelPermalink }}">次へ：{{ .LinkTitle }} »</a>
+    <a class="next" href="{{ .RelPermalink }}"> Next: {{ .LinkTitle }} »</a>
   {{ end }}
 </nav>
   

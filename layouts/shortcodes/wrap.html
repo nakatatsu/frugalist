@@ -1,20 +1,18 @@
-{{- /* ─── 引数から class を取り出しでHTMLタグ付きにする ─── */ -}}
 {{- $cls := "" -}}
 {{- if .IsNamedParams     -}}
-  {{ $cls = .Get "class" }}    {{/* named：class="foo bar" */}}
+  {{ $cls = .Get "class" }} 
 {{- else                      -}}
-  {{ $cls = delimit .Params " " }}  {{/* positional："foo" "bar" など */}}
+  {{ $cls = delimit .Params " " }} 
 {{- end -}}
 
 <div{{ with $cls }} class="{{ . }}"{{ end }}>
-  {{/* 中身を Markdown として解釈し、不要な <p> を削除 */}}
   {{ $raw := .Inner | markdownify }}
   {{ $clean := replaceRE `(?s)^<p>(.*)</p>$` `${1}` $raw }}
   {{ $clean | safeHTML }}
 </div>
 
 {{- /*
-<!-- 例
+<!-- e.g.,
 {{< wrap class="hoge" >}}
 **strong!**
 {{< /wrap >}}

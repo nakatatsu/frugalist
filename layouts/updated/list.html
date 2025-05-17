@@ -1,19 +1,13 @@
 {{ define "main" }}
   <h1>{{ .Title }}</h1>
   
-  {{/* 記事だけを取る場合は mainSections 等で絞り込み $pages := where .Site.RegularPages "Type" "in" site.MainSections */}}
   {{ $pages := .Site.RegularPages }}
-
-  {{/* .ByLastmod は昇順なので Reverse で降順に */}}
   {{ $sorted := $pages.ByLastmod.Reverse }} {{/* Hugo ≥0.147 */}}
-
-  {{/* 1 ページ 20 件でページネーション */}}
   {{ $paginator := .Paginate $sorted 20 }}
-
   {{ range $paginator.Pages }}
     <article>
       <h2><a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a></h2>
-      <p>Create: <time>{{ .Date.Format "2006年01月02日" }}</time> Update: <time>{{ .Lastmod.Format "2006年01月02日" }}</time></p>
+      <p>Create: <time>{{ .Date.Format "2006/01/02" }}</time> Update: <time>{{ .Lastmod.Format "2006/01/02" }}</time></p>
     </article>
   {{ end }}
   
