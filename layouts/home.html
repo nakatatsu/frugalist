@@ -41,4 +41,22 @@
   </article>
 {{ end }}
 
+
+
+<h2 class="term-title">Updated Categories</h2>
+  <article>
+    <ul class="categories-list">
+      {{- $cats := slice -}}
+      {{- range first 100 (site.RegularPages.ByDate.Reverse) }}
+          {{- $cats = $cats | append .Params.categories -}}
+      {{- end }}
+      {{- $cats = uniq $cats -}}
+      {{- range first 10 $cats }}
+      {{ $category := . | urlize }}
+          <li><a href="{{ "categories/" | relLangURL }}{{ $category }}.html">{{ . }}</a></li>
+      {{- end }}
+    </ul>
+</article>
+
+
 {{ end }}
