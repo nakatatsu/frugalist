@@ -12,10 +12,6 @@
 {{- with $author }}
 <meta name="author" content="{{ . }}">
 {{- end }}
-<meta property="og:title" content="{{ if .IsHome }}{{ site.Title }}{{ else }}{{ printf "%s | %s" .Title site.Title }}{{ end }}">
-<meta property="og:description" content="{{ .Description | default site.Params.description }}">
-<meta property="og:type" content="website">
-<meta property="og:url" content="{{ .Permalink }}">
-<meta property="og:image" content="{{ .Site.BaseURL }}img/og.webp">
+{{ template "_internal/opengraph.html" . }}
 <link rel="canonical" href="{{ .Permalink }}">
 {{ partialCached "head/css.html" . }}
