@@ -28,11 +28,15 @@
 
 <h2 class="term-title">Recent Posts</h2>
 
-{{ range site.RegularPages }}
+{{ $pages := site.RegularPages.ByDate.Reverse }}
+{{ $paginator := .Paginate $pages }}
+{{ range $paginator.Pages }}
   <article>
-  {{ partial "article-date.html" . }}
-  <h3 class="article-title"><a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a></h3>
-  {{ partial "article-categories.html" . }}
+    {{ partial "article-date.html" . }}
+    <h3 class="article-title">
+      <a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a>
+    </h3>
+    {{ partial "article-categories.html" . }}
     {{ .Summary }}
   </article>
 {{ end }}
