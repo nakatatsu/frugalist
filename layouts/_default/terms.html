@@ -1,0 +1,17 @@
+{{/* Used in /categories.html and tags.html */}}
+{{ define "main" }}
+<h1>{{ .Title }}ddddd</h1>
+<article>
+  <div class="contents">
+  <ul>
+    {{ range .Data.Terms.ByCount }}          {{/* or .Alphabetical */}}
+      <li>
+        <a href="{{ .Page.RelPermalink }}">{{ .Page.LinkTitle }}</a>
+        ({{ .Count }})
+      </li>
+    {{ end }}
+  </ul>
+  </div>
+</article>
+{{ end }}
+
