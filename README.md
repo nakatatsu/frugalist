@@ -22,4 +22,16 @@ echo "theme = 'frugalist'" >> hugo.toml
 ref: https://gohugo.io/getting-started/quick-start/
 
 
+## Update
 
+⚠️ WARNING:
+
+Updating the theme can introduce breaking changes. Always backup your site before proceeding.
+
+Never apply updates directly to your production environment without thorough testing.
+
+```
+git submodule update --remote --merge
+git add themes/frugalist
+git commit -m "Update frugalist theme to latest commit"
+```
