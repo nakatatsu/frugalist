@@ -33,15 +33,15 @@
 
   --main-space: 1em;
 
-  --pagination-bg: #ffffff;
+  --pagination-background: #ffffff;
   --pagination-border: #dee2e6;
   --pagination-primary: #0d6efd;
-  --pagination-hover-bg: #e9ecef;
+  --pagination-hover-background: #e9ecef;
   --pagination-disabled: #6c757d;
 
-  --button-bg: #2563eb;
+  --button-background: #2563eb;
   --button-color: #ffffff;
-  --button-hover-bg: #1d4ed8;
+  --button-hover-background: #1d4ed8;
 }
 
 [data-theme="warm"] {
@@ -71,15 +71,15 @@
 
   --main-space: 1em;
 
-  --pagination-bg: #fffaf5;
+  --pagination-background: #fffaf5;
   --pagination-border: #e0b090;
   --pagination-primary: #ff8c00;
-  --pagination-hover-bg: #ffe4b5;
+  --pagination-hover-background: #ffe4b5;
   --pagination-disabled: rgb(49, 48, 46);
 
-  --button-bg: #ff8c00;
+  --button-background: #ff8c00;
   --button-color: #ffffff;
-  --button-hover-bg: #cc6600;
+  --button-hover-background: #cc6600;
 }
 
 [data-theme="cool"] {
@@ -111,15 +111,15 @@
 
   --main-space: 1em;
 
-  --pagination-bg: #ffffff;
+  --pagination-background: #ffffff;
   --pagination-border: #ccd9e6;
   --pagination-primary: #006edc;
-  --pagination-hover-bg: #e6eff9;
+  --pagination-hover-background: #e6eff9;
   --pagination-disabled: #7f9cb5;
 
-  --button-bg: #006edc;
+  --button-background: #006edc;
   --button-color: #ffffff;
-  --button-hover-bg: #155ab6;
+  --button-hover-background: #155ab6;
 }
 
 
@@ -333,14 +333,14 @@ ul.pagination .page-link {
   padding: 0.5rem 0.75rem;
   text-decoration: none;
   color: var(--pagination-primary);
-  background-color: var(--pagination-bg);
+  background-color: var(--pagination-background);
   border: 1px solid var(--pagination-border);
   font-size: 0.9rem;
   transition: background-color 0.15s ease-in-out;
 }
 
 ul.pagination .page-link:hover {
-  background-color: var(--pagination-hover-bg);
+  background-color: var(--pagination-hover-background);
 }
 
 ul.pagination .page-item.active .page-link {
@@ -352,7 +352,7 @@ ul.pagination .page-item.active .page-link {
 
 ul.pagination .page-item.disabled .page-link {
   color: var(--pagination-disabled);
-  background-color: var(--pagination-bg);
+  background-color: var(--pagination-background);
   pointer-events: none;
   cursor: not-allowed;
 }
