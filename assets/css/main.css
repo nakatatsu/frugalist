@@ -178,7 +178,9 @@ section {
 }
 
 article ul,
-section ul {
+section ul,
+article ol,
+section ol {
   margin-left: var(--main-space);
 }
 
