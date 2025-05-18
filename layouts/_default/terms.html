@@ -2,7 +2,6 @@
 {{ define "main" }}
 <h1>{{ .Title }}ddddd</h1>
 <article>
-  <div class="contents">
   <ul>
     {{ range .Data.Terms.ByCount }}          {{/* or .Alphabetical */}}
       <li>
@@ -11,7 +10,6 @@
       </li>
     {{ end }}
   </ul>
-  </div>
 </article>
 {{ end }}
 
