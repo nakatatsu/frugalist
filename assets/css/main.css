@@ -184,6 +184,20 @@ section ol {
   margin-left: var(--main-space);
 }
 
+article p {
+  line-height: 1.6; 
+  margin-bottom: 1.25rem; 
+}
+
+article blockquote {
+  margin: 2rem 0; 
+  padding: 1rem 1.5rem; 
+  background-color: var(--background-accent-light); 
+  font-style: italic; 
+  color: var(--color-article-light); 
+  border-radius: 4px; 
+}
+
 footer {
   background: var(--background-frame);
   color: var(--color-frame);
@@ -439,4 +453,3 @@ button:hover {
   background: var(--button-hover-background);
   opacity: .9
 }
-
