@@ -59,8 +59,8 @@
   --link-color-visited: #993300;
 
   --link-color-frame: #fff8e6;
-  --link-color-frame-hover: #ffffff; 
-  --link-color-frame-visited: #ffe6b3; 
+  --link-color-frame-hover: #ffffff;
+  --link-color-frame-visited: #ffe6b3;
 
   --background-accent-light: #fff7f0;
   --border-accent-light: #e0b090;
@@ -349,4 +349,8 @@ ul.pagination .page-link span[aria-hidden="true"] {
   display: inline-block;
   width: 1em;
   text-align: center;
+}
+
+.site-logo {
+  max-height: 50px;
 }
