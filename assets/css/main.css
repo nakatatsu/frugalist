@@ -191,6 +191,10 @@ footer {
   padding: var(--main-space) 0;
 }
 
+figcaption p{
+  font-size: 0.85em;
+  color: var(--color-article-light)
+}
 
 a {
   color: var(--link-color);
