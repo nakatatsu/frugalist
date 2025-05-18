@@ -351,6 +351,34 @@ ul.pagination .page-link span[aria-hidden="true"] {
   text-align: center;
 }
 
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1em 0;
+}
+
+thead {
+  background-color: var(--background-base);
+}
+
+th,
+td {
+  padding: 12px 16px;
+  border: 1px solid var(--border-accent-light);
+  text-align: left;
+}
+
+th {
+  font-weight: 600;
+  background-color: var(--background-accent-light);
+  color: var(--color-article);
+}
+
+tbody tr:nth-child(even) {
+  background-color: var(--background-base);
+}
+
 .site-logo {
   max-height: 50px;
 }
