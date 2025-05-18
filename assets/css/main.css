@@ -379,6 +379,13 @@ tbody tr:nth-child(even) {
   background-color: var(--background-base);
 }
 
+
+.highlight pre {
+  overflow-x: auto;
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+
 .site-logo {
   max-height: 50px;
 }
