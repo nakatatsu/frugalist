@@ -39,9 +39,9 @@
   --pagination-hover-background: #e9ecef;
   --pagination-disabled: #6c757d;
 
-  --button-background: #2563eb;
+  --button-background: #1d4ed8;
   --button-color: #ffffff;
-  --button-hover-background: #1d4ed8;
+  --button-hover-background: #2563eb;
 }
 
 [data-theme="warm"] {
