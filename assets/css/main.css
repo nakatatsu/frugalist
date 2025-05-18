@@ -403,13 +403,6 @@ tbody tr:nth-child(even) {
 }
 
 
-form {
-  background: var(--background-article);
-  padding: 1.5rem;
-  border-radius: .5rem;
-  box-shadow: var(--shadow-normal);
-}
-
 label {
   display: block;
   margin-bottom: .25rem;
