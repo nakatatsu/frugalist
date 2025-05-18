@@ -54,7 +54,6 @@ lastmod = [":git", "lastmod", ":fileModTime", "date"]
 
 
 [markup]
-
   [markup.goldmark.renderer]
     unsafe = true
 

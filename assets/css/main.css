@@ -39,9 +39,9 @@
   --pagination-hover-background: #e9ecef;
   --pagination-disabled: #6c757d;
 
-  --button-background: #1d4ed8;
+  --button-background: #2563eb; 
   --button-color: #ffffff;
-  --button-hover-background: #2563eb;
+  --button-hover-background: #1d4ed8;
 }
 
 [data-theme="warm"] {
@@ -401,3 +401,43 @@ tbody tr:nth-child(even) {
 .site-logo {
   max-height: 50px;
 }
+
+
+form {
+  background: var(--background-article);
+  padding: 1.5rem;
+  border-radius: .5rem;
+  box-shadow: var(--shadow-normal);
+}
+
+label {
+  display: block;
+  margin-bottom: .25rem;
+  font-weight: 600;
+}
+
+input,
+textarea {
+  width: 100%;
+  padding: .5rem;
+  border: 1px solid var(--border-accent-light);
+  border-radius: .25rem;
+  margin-bottom: 1rem;
+  font-size: .875rem;
+}
+
+button {
+  background: var(--button-background);
+  color: var(--button-color);
+  border: 0;
+  padding: .5rem 1rem;
+  border-radius: .25rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+button:hover {
+  background: var(--button-hover-background);
+  opacity: .9
+}
+
