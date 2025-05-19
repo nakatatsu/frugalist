@@ -207,7 +207,8 @@ footer {
 
 figcaption p{
   font-size: 0.85em;
-  color: var(--color-article-light)
+  color: var(--color-article-light);
+  text-align: center;
 }
 
 a {
@@ -411,6 +412,9 @@ tbody tr:nth-child(even) {
   background-color: var(--background-base);
 }
 
+.highlight {
+  margin: 1em 0;
+}
 
 .highlight pre {
   overflow-x: auto;
