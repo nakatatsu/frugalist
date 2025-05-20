@@ -182,10 +182,10 @@ section ul,
 article ol,
 section ol {
   margin-left: var(--main-space);
+  margin-bottom: 1.6em;
 }
 
 article p {
-  line-height: 1.6; 
   margin-bottom: 1.25rem; 
 }
 
@@ -263,7 +263,6 @@ h1,
   font-size: 1.5rem;
   color: var(--color-article);
   font-weight: bold;
-  line-height: 1.3;
   margin-top: 0.5em;
   margin-bottom: 0.5em;
 }
@@ -275,7 +274,6 @@ article h5,
 article h6 {
   color: var(--color-article);
   font-weight: bold;
-  line-height: 1.3;
   margin-top: 1.5em;
   margin-bottom: 0.5em;
 }
