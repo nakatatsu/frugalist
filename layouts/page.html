@@ -10,7 +10,7 @@
   {{ .Content }}
 </article>
 
-{{ $pages := site.RegularPages.ByDate }}
+{{ $pages := site.RegularPages.ByDate.Reverse }}
 
 <nav class="nav-post">
   {{ with $pages.Prev . }}
