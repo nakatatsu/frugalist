@@ -39,7 +39,7 @@
   --pagination-hover-background: #e9ecef;
   --pagination-disabled: #6c757d;
 
-  --button-background: #2563eb; 
+  --button-background: #2563eb;
   --button-color: #ffffff;
   --button-hover-background: #1d4ed8;
 }
@@ -186,16 +186,16 @@ section ol {
 }
 
 article p {
-  margin-bottom: 1.25rem; 
+  margin-bottom: 1.25rem;
 }
 
 article blockquote {
-  margin: 2rem 0; 
-  padding: 1rem 1.5rem; 
-  background-color: var(--background-accent-light); 
-  font-style: italic; 
-  color: var(--color-article-light); 
-  border-radius: 4px; 
+  margin: 2rem 0;
+  padding: 1rem 1.5rem;
+  background-color: var(--background-accent-light);
+  font-style: italic;
+  color: var(--color-article-light);
+  border-radius: 4px;
 }
 
 footer {
@@ -205,7 +205,7 @@ footer {
   padding: var(--main-space) 0;
 }
 
-figcaption p{
+figcaption p {
   font-size: 0.85em;
   color: var(--color-article-light);
   text-align: center;
@@ -454,4 +454,32 @@ button {
 button:hover {
   background: var(--button-hover-background);
   opacity: .9
+}
+
+nav.share-links {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+nav.share-links a {
+  display: inline-block;
+  padding: 8px 16px;
+  color: var(--link-color-frame);
+  background-color: var(--background-frame);
+  text-decoration: none;
+  border-radius: 6px;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+nav.share-links a:hover,
+nav.share-links a:focus {
+  background-color: var(--link-color-frame-hover);
+  transform: translateY(-2px);
+}
+
+nav.share-links a:active {
+  transform: translateY(1px);
+  opacity: 0.9;
 }

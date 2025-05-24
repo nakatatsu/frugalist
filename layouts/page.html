@@ -9,7 +9,13 @@
   {{ partial "article-categories.html" . }}
   {{ .Content }}
 
+  {{ if .Site.Params.enableSnsShare }}
   {{ partial "share.html" . }}
+  {{ end }}
+
+  {{ if .Site.Params.enableAuthor }}
+  {{ partial "author.html" . }}
+  {{ end }}
 </article>
 
 {{ $pages := site.RegularPages.ByDate.Reverse }}
