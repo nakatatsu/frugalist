@@ -183,6 +183,15 @@ article ol,
 section ol {
   margin-left: var(--main-space);
   margin-bottom: 1.6em;
+  list-style: none;
+  padding-left: 0;
+  border-left: 3px solid #6c63ff;
+  margin: 1em 0;
+}
+
+ul li {
+  padding: 0.5em 1em;
+  border-bottom: 1px dashed #ddd;
 }
 
 article p {
@@ -329,6 +338,10 @@ article h6 {
 .nav-post a {
   min-width: 30%;
   display: inline-block;
+}
+
+section h2 {
+  font-size:1em;
 }
 
 
@@ -483,3 +496,55 @@ nav.share-links a:active {
   transform: translateY(1px);
   opacity: 0.9;
 }
+
+
+
+
+.author-box {
+  background-color: var(--background-accent-light);
+  border: 1px solid var(--border-accent-light);
+  padding: 1em;
+  border-radius: 8px;
+  margin-top: var(--main-space);
+}
+
+.author-title {
+  font-size: 1em;
+  font-weight: bold;
+  margin-bottom: 0.8em;
+  color: var(--color-article);
+}
+
+.author-content {
+  display: flex;
+  align-items: center;
+}
+
+.author-image {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-right: 1em;
+}
+
+.author-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.author-name {
+  font-size: 1.1em;
+  font-weight: bold;
+  margin-bottom: 0.3em;
+  color: var(--color-article);
+}
+
+.author-bio {
+  font-size: 0.95em;
+  color: var(--color-article);
+}
+
+
+
+
