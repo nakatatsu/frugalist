@@ -3,8 +3,7 @@
 {{ define "main" }}
 <h1>{{ .Title }}</h1>
 <article>
-
-{{ .Content }}
+  
 <ul class="article-list">
   {{ range .Pages.ByDate.Reverse }}
     <li>

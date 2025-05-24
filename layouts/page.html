@@ -8,6 +8,8 @@
   <h1 class="article-title">{{ .Title }}</h1>
   {{ partial "article-categories.html" . }}
   {{ .Content }}
+
+  {{ partial "share.html" . }}
 </article>
 
 {{ $pages := site.RegularPages.ByDate.Reverse }}
