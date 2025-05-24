@@ -28,7 +28,7 @@
 
 <h2 class="term-title">Recent Posts</h2>
 
-{{ $pages := site.RegularPages.ByDate.Reverse }}
+{{ $pages := site.RegularPages.ByPublishDate.Reverse }}
 {{ $paginator := .Paginate $pages }}
 {{ range $paginator.Pages }}
   <article>
